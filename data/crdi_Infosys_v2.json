@@ -1,0 +1,43 @@
+{
+  "company": "Infosys",
+  "crdi_score": 0.3491,
+  "risk_label": "WATCHLIST",
+  "risk_icon": "\ud83d\udfe1",
+  "risk_description": "Minor anomalies detected \u2013 warrants monitoring",
+  "breakdown": [
+    {
+      "module": "Geospatial Verification",
+      "score": 0.4398,
+      "weight": 0.4,
+      "verdict": "LOW_RISK",
+      "details": {
+        "images_analyzed": 2,
+        "max_risk": 0.504
+      }
+    },
+    {
+      "module": "Behavioral Forensics",
+      "score": 0.2886,
+      "weight": 0.6,
+      "verdict": "MODERATE_RISK",
+      "details": {
+        "audio_stress": 0.5478,
+        "semantic_deception": 0.1158,
+        "hedging_trend": "STABLE",
+        "evasion_trend": "DECREASING",
+        "key_red_flags": [
+          "vague explanation of head count increase",
+          "lack of specific numbers for guidance upgrade",
+          "avoidance of direct answer on margin dip",
+          "good outlook, even as we look into the next financial year\" without specific data",
+          "well on a way to finish our 20,000 number for this year\" without clear confirmation"
+        ]
+      }
+    }
+  ],
+  "data_sources": {
+    "geospatial": true,
+    "behavioral": true
+  },
+  "generated_at": "2026-02-14T23:45:05.531615"
+}

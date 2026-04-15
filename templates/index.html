@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veritas AI | Corporate Fraud Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Leaflet (Map) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar / Navigation -->
+        <nav class="sidebar">
+            <div class="logo">
+                <h1>Veritas <span>AI</span></h1>
+                <p>Fraud Detection System</p>
+            </div>
+            <ul class="steps-nav">
+                <li class="active" data-step="1">1. Company Profile</li>
+                <li data-step="2">2. Geospatial Verify</li>
+                <li data-step="3">3. Bldg Classification</li>
+                <li data-step="4">4. Voice Analysis</li>
+                <li data-step="5">5. Fusion Verdict</li>
+                <li data-step="6">6. Report Gen</li>
+                <li data-step="7">7. Export</li>
+                <li data-step="8">8. Finish</li>
+            </ul>
+            <div style="margin-top:auto; padding: 20px;">
+                <button onclick="resetApp()"
+                    style="background: rgba(255,50,50,0.2); border: 1px solid #ff4444; color: #ffcccc; width: 100%; padding: 10px; font-size: 0.8rem;">⚠
+                    Reset App</button>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="content">
+            <!-- Step 1: Input -->
+            <section id="step-1" class="step-card active">
+                <h2>Target Company Profile</h2>
+                <div class="input-group">
+                    <label>Company Name</label>
+                    <input type="text" id="company-name" value="Infosys" placeholder="E.g., Adani Enterprises">
+                </div>
+                <div class="input-group-row">
+                    <div class="input-group">
+                        <label>Latitude</label>
+                        <input type="number" step="any" id="lat" value="12.8399">
+                    </div>
+                    <div class="input-group">
+                        <label>Longitude</label>
+                        <input type="number" step="any" id="lon" value="77.6770">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>Fiscal Quarter</label>
+                    <input type="text" id="quarter" value="Q3 2024">
+                </div>
+                <button class="btn-primary" onclick="goToStep(2)">Next: Verify Location ➜</button>
+            </section>
+
+            <!-- Step 2: Geospatial -->
+            <section id="step-2" class="step-card hidden">
+                <h2>Geospatial Verification</h2>
+                <p class="description">Verifying physical existence via Mapillary/ZenSVI.</p>
+
+                <div id="map-container" style="height: 300px; border-radius: 12px; margin-bottom: 20px;"></div>
+
+                <button class="btn-secondary" onclick="runGeospatialFetch()">📍 Verify Coordinates</button>
+
+                <div id="geo-results" class="results-grid hidden">
+                    <!-- Images will be injected here -->
+                </div>
+
+                <div class="actions">
+                    <button class="btn-back" onclick="goToStep(1)">Back</button>
+                    <button class="btn-primary hidden" id="btn-next-3" onclick="goToStep(3)">Next: Classify ➜</button>
+                </div>
+            </section>
+
+            <!-- Step 3: Classification -->
+            <section id="step-3" class="step-card hidden">
+                <h2>Building Classification</h2>
+                <p class="description">Analyzing scene via PyTorch Places365 (ResNet18).</p>
+
+                <div class="loading-spinner hidden" id="classify-loading">
+                    <div class="spinner"></div> Analyze Building Structure...
+                </div>
+
+                <div id="classification-results" class="results-card hidden">
+                    <!-- Verdict here -->
+                </div>
+
+                <button class="btn-secondary" onclick="runClassification()">🧠 Run Classification</button>
+
+                <div class="actions">
+                    <button class="btn-back" onclick="goToStep(2)">Back</button>
+                    <button class="btn-primary hidden" id="btn-next-4" onclick="goToStep(4)">Next: Voice Analysis
+                        ➜</button>
+                </div>
+            </section>
+
+            <!-- Step 4: Voice Analysis -->
+            <section id="step-4" class="step-card hidden">
+                <h2>Step 4: Voice Analysis</h2>
+                <p class="description">Upload earnings call audio or transcript to detecting deception (micro-tremors &
+                    semantic drift).</p>
+
+                <div class="voice-input-container" style="margin-top: 20px;">
+                    <div class="tabs" style="display: flex; gap: 10px; margin-bottom: 15px;">
+                        <button class="tab-btn active" onclick="switchTab('upload')"
+                            style="flex:1; padding:10px; cursor:pointer;">📂 Upload Audio</button>
+                        <button class="tab-btn" onclick="switchTab('youtube')"
+                            style="flex:1; padding:10px; cursor:pointer;">🎥 YouTube URL</button>
+                        <button class="tab-btn" onclick="switchTab('text')"
+                            style="flex:1; padding:10px; cursor:pointer;">📝 Transcript</button>
+                    </div>
+
+                    <div id="tab-upload" class="tab-content active"
+                        style="padding: 20px; border: 1px dashed #444; border-radius: 8px; text-align: center;">
+                        <input type="file" id="audio-file" accept=".mp3,.wav,.m4a" style="margin-bottom: 10px;">
+                        <p class="small" style="color:#888;">Supported: MP3, WAV (Max 10MB)</p>
+                    </div>
+
+                    <div id="tab-youtube" class="tab-content hidden"
+                        style="padding: 20px; border: 1px dashed #444; border-radius: 8px;">
+                        <input type="text" id="youtube-url" placeholder="Paste YouTube URL (e.g. Earnings Call)"
+                            style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #555; background: #222; color: #fff;">
+                        <p class="small" style="color:#888; margin-top:5px;">We will download and extract audio
+                            automatically.</p>
+                    </div>
+
+                    <div id="tab-text" class="tab-content hidden"
+                        style="padding: 20px; border: 1px dashed #444; border-radius: 8px;">
+                        <textarea id="transcript-text" rows="5" placeholder="Paste earnings call transcript here..."
+                            style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #555; background: #222; color: #fff;"></textarea>
+                    </div>
+
+                    <div style="margin-top: 20px; text-align: center;">
+                        <button class="btn-secondary" onclick="runVoiceAnalysis()"
+                            style="width: 100%; padding: 12px;">🔍 Analyze for Deception</button>
+                    </div>
+                </div>
+
+                <div id="voice-loading" class="hidden" style="text-align: center; margin-top: 20px;">
+                    <div class="spinner"></div>
+                    <p style="margin-top: 10px;">Analyzing micro-tremors and semantic patterns...</p>
+                </div>
+
+                <div id="voice-results" class="results-grid hidden" style="margin-top: 20px; display: block;">
+
+                    <!-- Micro-Tremors -->
+                    <div class="metric-card"
+                        style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px; margin-bottom: 10px;">
+                        <h4 style="margin: 0 0 10px 0;">Micro-Tremor Risk (Acoustic)</h4>
+                        <div class="score-bar"
+                            style="background: #333; height: 10px; border-radius: 5px; overflow: hidden;">
+                            <div id="tremor-bar" class="score-fill"
+                                style="width: 0%; background: #4ade80; height: 100%;"></div>
+                        </div>
+                        <p id="tremor-detail" style="font-size: 0.9rem; margin-top: 5px; color: #ccc;">Waiting for
+                            audio...</p>
+                    </div>
+
+                    <!-- Semantic Drift -->
+                    <div class="metric-card"
+                        style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px;">
+                        <h4 style="margin: 0 0 10px 0;">Semantic Drift (Linguistic)</h4>
+                        <div id="semantic-status" class="status-badge"
+                            style="display: inline-block; padding: 4px 8px; border-radius: 4px; background: #555; font-size: 0.85rem;">
+                            Pending</div>
+                        <p id="semantic-detail" class="small" style="font-size: 0.9rem; margin-top: 10px; color: #ccc;">
+                        </p>
+                    </div>
+
+                    <div id="transcription-box" class="hidden"
+                        style="margin-top: 15px; font-size: 0.8rem; color: #888; border-top: 1px solid #444; padding-top: 10px;">
+                        <strong>Processed Text:</strong> <span id="transcription-content-preview"></span>...
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="btn-back" onclick="goToStep(3)">Back</button>
+                    <button class="btn-primary hidden" id="btn-next-5" onclick="goToStep(5)">Next: Fusion Verdict
+                        ➜</button>
+                </div>
+            </section>
+
+            <section id="step-5" class="step-card hidden">
+                <h2>Step 5: Fusion Verdict</h2>
+                <p class="description">Combining Geospatial and Behavioral signals.</p>
+                <div style="text-align:center; padding: 2rem;">
+                    <h1>CRDI Score: <span style="color:#fbbf24">53%</span></h1>
+                    <p>Verdict: SUSPICIOUS</p>
+                </div>
+                <div class="actions">
+                    <button class="btn-back" onclick="goToStep(4)">Back</button>
+                    <button class="btn-primary" onclick="goToStep(6)">Next: Generate Report ➜</button>
+                </div>
+            </section>
+
+            <section id="step-6" class="step-card hidden">
+                <h2>Step 6: Report Generation</h2>
+                <p>Compiling evidence...</p>
+                <div class="actions">
+                    <button class="btn-back" onclick="goToStep(5)">Back</button>
+                    <button class="btn-primary" onclick="goToStep(7)">Next: Export ➜</button>
+                </div>
+            </section>
+
+            <section id="step-7" class="step-card hidden">
+                <h2>Step 7: Export Data</h2>
+                <p>Download JSON/PDF.</p>
+                <div class="actions">
+                    <button class="btn-back" onclick="goToStep(6)">Back</button>
+                    <button class="btn-primary" onclick="goToStep(8)">Next: Finish ➜</button>
+                </div>
+            </section>
+
+            <section id="step-8" class="step-card hidden">
+                <h2>Step 8: Complete</h2>
+                <p>Analysis session finished.</p>
+                <div class="actions">
+                    <button class="btn-back" onclick="goToStep(7)">Back</button>
+                    <button class="btn-primary" onclick="goToStep(1)">New Analysis ↻</button>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

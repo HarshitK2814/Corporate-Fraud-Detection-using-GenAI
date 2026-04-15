@@ -1,0 +1,286 @@
+\documentclass[conference]{IEEEtran}
+
+% ── Packages ────────────────────────────────────────────────────────────────
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{balance}
+
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+% ── Document ────────────────────────────────────────────────────────────────
+\begin{document}
+
+\title{A Multimodal Framework for Corporate Fraud Risk Estimation\\
+Using Geospatial, Auditory, and Linguistic Signals}
+
+\author{
+\IEEEauthorblockN{Harshit Kumar}
+\IEEEauthorblockA{
+\textit{Department of Computer Science} \\
+\textit{Manipal University Jaipur} \\
+Jaipur, India
+}
+\and
+\IEEEauthorblockN{Shashank Shekhar}
+\IEEEauthorblockA{
+\textit{Department of Computer Science} \\
+\textit{Manipal University Jaipur} \\
+Jaipur, India
+}
+\and
+\IEEEauthorblockN{Sarthak Kumar}
+\IEEEauthorblockA{
+\textit{Department of Computer Science} \\
+\textit{Manipal University Jaipur} \\
+Jaipur, India
+}
+}
+
+\maketitle
+
+% ── Abstract ────────────────────────────────────────────────────────────────
+\begin{abstract}
+Corporate fraud causes an estimated \$4.7 trillion in annual losses globally
+\cite{acfe2024}. Traditional detection relies on retrospective financial-statement
+analysis, missing behavioral traces executives leave in non-financial channels.
+We present a multimodal fraud risk estimation framework that
+fuses three independent signal modalities: (1) \emph{geospatial verification} via
+Google Street View imagery classified by a ResNet-18/Places365 CNN,
+(2) \emph{auditory stress analysis} via digital signal processing of earnings call
+recordings, and (3) \emph{linguistic deception detection} via LLM-based semantic
+analysis of call transcripts. These heterogeneous signals are combined by a
+Gradient Boosting classifier into a single \textbf{Corporate Reality Distortion
+Index (CRDI)} score. Evaluated on a calibrated semi-synthetic dataset of 276
+company profiles (50 fraud, 226 legitimate) using 5-fold stratified
+cross-validation, the full multimodal system achieves an F1-score of
+\textbf{0.905 $\pm$ 0.052} and AUC-ROC of \textbf{0.976 $\pm$ 0.015}, with
+statistically significant improvements over audio-only ($p < 0.001$) and
+geospatial-only ($p < 0.016$) baselines. SHAP analysis reveals linguistic
+features contribute 61.9\% of model decisions, geospatial 19.8\%, and auditory
+18.2\%. An automated data collection pipeline covering 271 real companies with
+SEC-confirmed fraud labels enables progressive transition to real-world
+evaluation.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Corporate Fraud Detection, Multimodal Learning, Geospatial Intelligence,
+Voice Stress Analysis, Large Language Models, Explainable AI, SHAP
+\end{IEEEkeywords}
+
+% ── 1. Introduction ─────────────────────────────────────────────────────────
+\section{Introduction}
+
+Corporate fraud detection has traditionally relied on financial ratio analysis
+(Beneish M-Score \cite{beneish1999}, Altman Z-Score) and manual auditing —
+approaches that are inherently \emph{retrospective} and \emph{uni-modal}.
+Recent data-mining reviews \cite{ngai2011} confirm these methods remain largely
+constrained to structured financial data. Meanwhile, executives engaged in fraud
+may leave behavioral traces across multiple non-financial channels.
+
+\textbf{Physical traces:} Shell companies may register at addresses that do not
+match claimed operations — vacant lots, residential homes, or mailbox stores.
+\textbf{Physiological traces:} Executives under deceptive cognitive load exhibit
+involuntary vocal stress markers, including elevated jitter and irregular pause
+patterns \cite{kirchhubel2013}.
+\textbf{Linguistic traces:} Deception correlates with measurable linguistic
+patterns — increased hedging, topic evasion, and syntactic complexity
+\cite{humpherys2011}.
+
+We make the following contributions:
+\begin{enumerate}
+  \item A multimodal fraud risk framework fusing geospatial, auditory, and
+        linguistic signals via a Gradient Boosting ensemble.
+  \item A novel \textbf{Corporate Reality Distortion Index (CRDI)}, a
+        probabilistic, explainable fraud risk score (0–100).
+  \item Rigorous ablation and statistical significance analysis demonstrating
+        the complementary value of each modality.
+  \item An automated data pipeline covering 271 real companies with SEC AAER
+        fraud labels for future real-world evaluation.
+\end{enumerate}
+
+% ── 2. Related Work ──────────────────────────────────────────────────────────
+\section{Related Work}
+
+Financial fraud detection via data mining has been surveyed comprehensively by
+Ngai et al. \cite{ngai2011}, who identify a predominance of logistic regression,
+neural networks, and decision trees applied to structured financial features.
+Beneish \cite{beneish1999} introduced the M-Score, a widely used indicator of 
+earnings manipulation. Recent advancements include FinBERT \cite{yang2020}, 
+which specialized BERT for financial sentiment and deception tasks, demonstrating 
+the power of domain-specific language models.
+
+Voice stress analysis as a deception cue has been studied in forensic phonetics 
+\cite{hollien1990}. Kirchhubel and Howard \cite{kirchhubel2013} review acoustic 
+correlates of deception, identifying jitter and shimmer as replicable 
+indicators. Larson et al. \cite{larson2021} specifically link vocal stress markers 
+to financial misreporting, providing the physiological foundation for our auditory module.
+
+Geospatial auditing remains an emerging field. Assenza et al. \cite{assenza2023} 
+demonstrate that geographic proximity and physical site verification can expose 
+fraudulent clusters that electronic records miss. Our work integrates these 
+insights into a unified multimodal system.
+
+% ── 3. Methodology ───────────────────────────────────────────────────────────
+\section{Methodology}
+
+The proposed framework adopts a \textbf{late fusion} strategy. Each of the three
+modality modules independently processes a company profile into a low-dimensional
+feature vector; fusion occurs at the feature level via a trained classifier.
+
+\subsection{Geospatial Intelligence Module}
+
+The geospatial module verifies whether a company's registered headquarters
+corresponds to a credible corporate facility using a hybrid Google 
+Intelligence pipeline.
+
+\textbf{Pipeline:}
+\begin{enumerate}
+  \item \emph{Image Acquisition}: GPS coordinates are submitted to the Google
+        Places API to retrieve the registered entity name and to the Google
+        Static Street View API to fetch panoramic images at four cardinal
+        headings (0°, 90°, 180°, 270°).
+  \item \emph{Entity Name Verification}: The registered entity name found via 
+        Google Places is compared against the input company name via fuzzy 
+        character sequence matching. A similarity threshold of \textbf{0.6} 
+        is enforced; mismatches or entity absences trigger a High Risk signal.
+  \item \emph{Scene Classification}: Images pass through ResNet-18 pretrained
+        on Places365 \cite{zhou2017}. Each of the 365 scene categories is mapped
+        to a risk score (e.g., \texttt{office\_building}: 0.05, 
+        \texttt{vacant\_lot}: 0.90).
+  \item \emph{Size-Aware Dampening}: Geospatial risk is reduced for startups
+        (50\%) and SMEs (25\%) to mitigate false positives for legitimate
+        home-based companies.
+\end{enumerate}
+
+\subsection{Auditory Intelligence Module}
+
+Four vocal stress features are extracted from earnings call audio using Librosa 
+DSP. We employ a \textbf{Speaker-Adaptive Baselining} strategy where the 
+initial 33\% of each segment establishes the resting vocal parameters.
+
+\begin{itemize}
+  \item \textbf{Jitter ($j$)}: Frequency perturbation calculated as the 
+        normalized absolute difference between adjacent F0 periods.
+  \item \textbf{Shimmer ($s$)}: Amplitude perturbation reflecting irregular 
+        subglottal pressure.
+  \item \textbf{Pitch Variance ($v$, $\sigma^2_{F_0}$)}: Estimated via the YIN 
+        algorithm; elevated under cognitive load.
+  \item \textbf{Pause Rate ($p$)}: Silence-to-speech ratio (threshold $-$20 dB), 
+        capturing hesitation and processing time.
+\end{itemize}
+
+\subsection{Linguistic Intelligence Module}
+
+The linguistic module identifies \emph{Semantic Drift} using \textbf{Llama 3.3 70B} 
+via a Chain-of-Thought prompt. It targets: (i) shifts from metrics to vagueness, 
+(ii) tangential responses (topic evasion), (iii) excessive hedging, and 
+(iv) convoluted syntax \cite{humpherys2011}.
+
+\subsection{Multimodal Fusion and CRDI Formulation}
+
+The six features are fused by a Gradient Boosting classifier:
+\begin{equation}
+  f_{\text{GB}}(\mathbf{x}) = \sigma\!\left(\sum_{m=1}^{100} \alpha_m \cdot h_m(\mathbf{x})\right)
+\end{equation}
+The CRDI score is then $\text{CRDI}(\mathbf{x}) = f_{\text{GB}}(\mathbf{x}) \times 100$, 
+mapped to five risk bands ranging from \textsc{Credible} to \textsc{Critical}.
+
+\subsection{Explainability Layer}
+
+Two mechanisms provide interpretability:
+(i)~\textbf{SHAP TreeExplainer} \cite{lundberg2017} for global and local 
+importance; (ii)~\textbf{Dynamic LLM Rationales} where Llama 3.3 70B generates 
+natural language summaries explaining the interaction between modalities.
+
+% ── 4. Dataset ───────────────────────────────────────────────────────────────
+\section{Dataset}
+
+\subsection{Training Dataset (N=276)}
+
+We construct 276 company profiles using forensic parameters. Notably, 40\% of 
+fraud cases are modeled as \textbf{competent liars} — exhibiting low vocal stress 
+and credible headquarters — ensuring realistic class overlap.
+
+\subsection{Real-World Data Pipeline (N=271)}
+
+An automated pipeline covers 271 real companies with SEC Accounting and 
+Auditing Enforcement Releases (AAER) fraud labels, including high-profile 
+cases like Enron, Wirecard, and FTX.
+
+% ── 5. Experiments ───────────────────────────────────────────────────────────
+\section{Experimental Results}
+
+Gradient Boosting achieves the highest performance (F1 = 0.905, AUC = 0.976). 
+Ablation studies confirm the complementarity of the three modalities. 
+SHAP analysis reveals a feature share of: Linguistic (61.9\%), Geospatial 
+(19.8\%), and Auditory (18.2\%).
+
+% ── 6. Conclusion ────────────────────────────────────────────────────────────
+\section{Conclusion}
+
+We presented a multimodal framework integrating geospatial, auditory, and 
+linguistic signals for corporate fraud risk estimation. Future work will 
+leverage the 271-company real-world dataset and incorporate longitudinal 
+tracking of executive speech patterns.
+
+% ── References ──────────────────────────────────────────────────────────────
+\bibliographystyle{IEEEtran}
+
+\begin{thebibliography}{15}
+
+\bibitem{acfe2024}
+Association of Certified Fraud Examiners (ACFE), ``Report to the Nations,'' 2024.
+
+\bibitem{beneish1999}
+M.~D. Beneish, ``The detection of earnings manipulation,'' \emph{Financ. Anal. J.}, 1999.
+
+\bibitem{ngai2011}
+E.~W.~T. Ngai et al., ``Data mining in financial fraud detection,'' \emph{Decis. Support Syst.}, 2011.
+
+\bibitem{kirchhubel2013}
+C.~Kirchhubel and D.~M. Howard, ``Detecting deception from voice,'' \emph{Int. J. Speech Lang. Law}, 2013.
+
+\bibitem{ekman1991}
+P.~Ekman, \emph{Telling Lies}, W.W. Norton, 1991.
+
+\bibitem{hollien1990}
+H.~Hollien, \emph{The Acoustics of Crime}, Plenum Press, 1990.
+
+\bibitem{humpherys2011}
+S.~L. Humpherys et al., ``Identification of fraudulent financial statements,'' \emph{Decis. Support Syst.}, 2011.
+
+\bibitem{zhou2017}
+B.~Zhou et al., ``Places: A 10 million image database,'' \emph{IEEE TPAMI}, 2017.
+
+\bibitem{lundberg2017}
+S.~M. Lundberg and S.~I. Lee, ``A unified approach to interpreting model predictions,'' \emph{NeurIPS}, 2017.
+
+\bibitem{yang2020}
+Y.~Yang et al., ``FinBERT: A Pre-trained Financial Language Model for Financial NLP Tasks,'' \emph{arXiv}, 2020.
+
+\bibitem{bao2022}
+Y.~Bao et al., ``Corporate Financial Fraud Prediction using LLMs,'' \emph{Decision Support Systems}, 2022.
+
+\bibitem{assenza2023}
+P.~Assenza et al., ``Geographic Information in Audit Analytics,'' \emph{Auditing: A Journal of Practice \& Theory}, 2023.
+
+\bibitem{larson2021}
+D.~Larson et al., ``Vocal Stress and Financial Misreporting,'' \emph{Journal of Accounting Research}, 2021.
+
+\bibitem{harkness2024}
+J.~Harkness et al., ``A Survey of AI in Corporate Fraud Detection,'' \emph{IEEE Access}, 2024.
+
+\bibitem{li2021}
+X.~Li et al., ``Multimodal Deep Learning for Financial Fraud Detection,'' \emph{Expert Systems with Applications}, 2021.
+
+\end{thebibliography}
+
+\end{document}
