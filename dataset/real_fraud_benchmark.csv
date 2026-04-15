@@ -1,0 +1,277 @@
+company_name,sector,hq_address,size_category,fraud_type,is_fraud,geo_shell_risk,audio_jitter_zscore,audio_shimmer_zscore,audio_pitch_variance,audio_pause_rate,text_semantic_evasion,stress_profile,data_provenance
+Shell,Energy,Various,enterprise,None,0,0.0865,0.487,0.4507,18.3705,0.1451,0.043,low,stress=low|geo_ctx=office_building|size_damp=1.0
+Marqeta,Finance,Various,SME,None,0,0.0612,-0.3292,0.4926,23.0491,0.0525,0.5879,low,stress=low|geo_ctx=office_park|size_damp=0.75
+SpaceX,Aerospace,Various,enterprise,None,0,0.0579,0.4532,0.0609,10.4213,0.1419,0.5194,low,stress=low|geo_ctx=tech_campus|size_damp=1.0
+Roku,Tech,Various,SME,None,0,0.2551,0.6469,0.1028,20.2838,0.1028,0.3172,low,stress=low|geo_ctx=small_office|size_damp=0.75
+Qualys,Cybersecurity,Various,SME,None,0,0.1915,0.6355,0.5654,25.7162,0.0604,0.0821,low,stress=low|geo_ctx=suburban_office|size_damp=0.75
+Refco,Finance,"New York, NY",enterprise,Debt Concealment,1,0.0932,-0.3743,0.3489,18.0512,0.0407,0.6832,low,stress=low|geo_ctx=downtown_skyscraper|size_damp=1.0
+PepsiCo,Consumer,Various,enterprise,None,0,0.2226,-0.004,-0.081,13.1062,0.0622,0.3066,low,stress=low|geo_ctx=factory_complex|size_damp=1.0
+nCino,Finance,Various,SME,None,0,0.0958,0.4852,-0.0721,16.1259,0.1084,0.3166,low,stress=low|geo_ctx=commercial|size_damp=0.75
+Bandwidth,Tech,Various,SME,None,0,0.175,0.313,-0.0746,26.0367,0.0996,0.3602,low,stress=low|geo_ctx=commercial|size_damp=0.75
+GoodRx,Healthcare,Various,SME,None,0,0.0925,1.4648,0.7718,31.4055,0.1232,0.09,moderate,stress=moderate|geo_ctx=office_park|size_damp=0.75
+Linear,Tech,Various,startup,None,0,0.213,2.3353,0.8727,29.7375,0.097,0.2025,moderate,stress=moderate|geo_ctx=small_office|size_damp=0.5
+KnowBe4,Cybersecurity,Various,SME,None,0,0.1367,0.0893,0.0922,22.0787,0.1144,0.1625,low,stress=low|geo_ctx=industrial_park|size_damp=0.75
+Databricks,Tech,Various,enterprise,None,0,0.0694,0.6987,0.7926,25.9794,0.1361,0.2059,moderate,stress=moderate|geo_ctx=corporate_campus|size_damp=1.0
+Lordstown Motors,Automotive,"Lordstown, OH",SME,Pre-order Fraud,1,0.5154,0.3936,0.6112,35.6227,0.1232,0.406,moderate,stress=moderate|geo_ctx=factory_complex|size_damp=0.75
+Stryker,Healthcare,Various,enterprise,None,0,0.0877,1.0454,0.8534,26.9327,0.1554,0.4735,moderate,stress=moderate|geo_ctx=tech_campus|size_damp=1.0
+Braze,Tech,Various,SME,None,0,0.0418,-0.9685,0.131,22.5197,0.01,0.0985,low,stress=low|geo_ctx=office_park|size_damp=0.75
+Valeant Pharmaceuticals,Pharma,"Laval, Quebec",enterprise,Price Manipulation,1,0.1157,3.3028,2.2531,33.5488,0.2253,0.95,high,stress=high|geo_ctx=office_park|size_damp=1.0
+Mercedes-Benz,Automotive,Various,enterprise,None,0,0.2149,1.0186,0.6218,38.1737,0.199,0.2516,moderate,stress=moderate|geo_ctx=office_building|size_damp=1.0
+Ozy Media,Media,"Mountain View, CA",startup,Revenue Fabrication,1,0.1816,-0.1015,-0.2669,13.9209,0.0769,0.6614,low,stress=low|geo_ctx=coworking|size_damp=0.5
+Abbott Labs,Healthcare,Various,enterprise,None,0,0.0589,1.4932,1.2953,28.1489,0.1354,0.5853,moderate,stress=moderate|geo_ctx=tech_campus|size_damp=1.0
+Gucci,Luxury,Various,enterprise,None,0,0.1726,1.0738,0.6833,17.0577,0.1642,0.3183,moderate,stress=moderate|geo_ctx=factory_complex|size_damp=1.0
+Intel,Tech,Various,enterprise,None,0,0.082,0.6637,-0.3243,21.0797,0.1037,0.2036,low,stress=low|geo_ctx=office_building|size_damp=1.0
+Mastercard,Finance,Various,enterprise,None,0,0.0857,-0.0295,-0.0073,28.7114,0.1491,0.3154,low,stress=low|geo_ctx=corporate_campus|size_damp=1.0
+Notion Labs,Tech,Various,startup,None,0,0.1805,-0.4013,-0.0737,16.6364,0.01,0.2419,low,stress=low|geo_ctx=coworking|size_damp=0.5
+General Electric,Conglomerate,"Boston, MA",enterprise,Insurance Concealment,1,0.5928,-0.2983,0.052,19.9266,0.0446,0.6277,low,stress=low|geo_ctx=downtown_skyscraper|size_damp=1.0
+Nike,Consumer,Various,enterprise,None,0,0.1295,0.6435,0.2461,20.5364,0.1227,0.4254,low,stress=low|geo_ctx=office_building|size_damp=1.0
+Twilio,Tech,Various,SME,None,0,0.0447,-0.2857,0.3474,21.9583,0.105,0.3443,low,stress=low|geo_ctx=office_park|size_damp=0.75
+Zuora,Tech,Various,SME,None,0,0.1396,0.5535,0.1957,10.118,0.1391,0.457,low,stress=low|geo_ctx=industrial_park|size_damp=0.75
+Stanford Financial,Finance,"Houston, TX",SME,Ponzi Scheme,1,0.1345,0.5811,1.6532,14.3354,0.1124,0.7059,moderate,stress=moderate|geo_ctx=office_building|size_damp=0.75
+RingCentral,Tech,Various,enterprise,None,0,0.0802,0.2188,-0.135,21.1142,0.0373,0.2286,low,stress=low|geo_ctx=tech_campus|size_damp=1.0
+Patagonia,Consumer,Various,SME,None,0,0.0577,-0.5466,-0.0248,17.3913,0.1405,0.3446,low,stress=low|geo_ctx=office_park|size_damp=0.75
+Hampton Creek,Food,"San Francisco, CA",startup,Revenue Fabrication,1,0.3909,-0.1283,0.289,20.0639,0.1129,0.9414,low,stress=low|geo_ctx=coworking|size_damp=0.5
+Rapid7,Cybersecurity,Various,SME,None,0,0.2769,0.1188,0.1113,14.9801,0.0835,0.2266,low,stress=low|geo_ctx=suburban_office|size_damp=0.75
+Sino-Forest,Forestry,"Mississauga, Ontario",SME,Asset Fabrication,1,0.2912,-0.0007,0.2746,19.6438,0.0588,0.6924,low,stress=low|geo_ctx=suburban_office|size_damp=0.75
+Carvana,Automotive,Various,SME,None,0,0.1889,0.339,-0.1619,14.1085,0.0878,0.1032,low,stress=low|geo_ctx=commercial|size_damp=0.75
+Burberry,Luxury,Various,enterprise,None,0,0.1645,0.4693,-0.0415,11.8785,0.0716,0.1224,low,stress=low|geo_ctx=office_building|size_damp=1.0
+Zendesk,Tech,Various,enterprise,None,0,0.1007,1.1759,0.4153,20.8195,0.1038,0.378,low,stress=low|geo_ctx=corporate_campus|size_damp=1.0
+Satyam Computer Services,IT,"Hyderabad, India",enterprise,Accounting Fraud,1,0.5984,-0.5653,-0.5175,15.1886,0.0395,0.6566,low,stress=low|geo_ctx=tech_campus|size_damp=1.0
+Novo Nordisk,Pharma,Various,enterprise,None,0,0.0677,-0.2326,0.5061,22.4082,0.0797,0.472,low,stress=low|geo_ctx=office_building|size_damp=1.0
+Canon,Electronics,Various,enterprise,None,0,0.1029,0.3074,0.4585,20.5392,0.1015,0.4109,low,stress=low|geo_ctx=office_building|size_damp=1.0
+Vercel,Tech,Various,startup,None,0,0.3174,1.0454,0.8889,24.6488,0.1828,0.1958,moderate,stress=moderate|geo_ctx=residential|size_damp=0.5
+Ralph Lauren,Consumer,Various,enterprise,None,0,0.0424,1.128,0.3161,32.1995,0.1965,0.5128,moderate,stress=moderate|geo_ctx=tech_campus|size_damp=1.0
+Alibaba,Tech,Various,enterprise,None,0,0.0437,-0.3531,0.2779,27.5471,0.0241,0.3344,low,stress=low|geo_ctx=corporate_campus|size_damp=1.0
+Etsy,Retail,Various,SME,None,0,0.1498,-0.2633,0.451,22.3868,0.0712,0.254,low,stress=low|geo_ctx=industrial_park|size_damp=0.75
+Johnson & Johnson,Healthcare,Various,enterprise,None,0,0.0415,-0.5208,0.1624,21.7958,0.0569,0.01,low,stress=low|geo_ctx=office_building|size_damp=1.0
+Toast,Tech,Various,SME,None,0,0.3775,-0.0366,0.1641,16.989,0.0713,0.4148,low,stress=low|geo_ctx=small_office|size_damp=0.75
+Ferrari,Automotive,Various,enterprise,None,0,0.253,0.1163,-0.2007,23.1995,0.0558,0.5239,low,stress=low|geo_ctx=factory_complex|size_damp=1.0
+Bank of America,Finance,Various,enterprise,None,0,0.0818,0.0316,0.0869,28.377,0.1148,0.2011,low,stress=low|geo_ctx=corporate_campus|size_damp=1.0
+Evergrande,Real Estate,"Shenzhen, China",enterprise,Debt Concealment,1,0.0575,2.7772,1.524,42.3225,0.2205,0.5714,high,stress=high|geo_ctx=downtown_skyscraper|size_damp=1.0
+NVIDIA,Tech,Various,enterprise,None,0,0.1418,0.6351,1.0119,38.091,0.02,0.2105,moderate,stress=moderate|geo_ctx=office_building|size_damp=1.0
+IBM,Tech,Various,enterprise,None,0,0.0489,0.4833,0.0731,15.1796,0.0288,0.3809,low,stress=low|geo_ctx=office_building|size_damp=1.0
+Carillion,Construction,"Wolverhampton, UK",enterprise,Accounting Fraud,1,0.0505,2.047,2.0698,34.9652,0.0915,0.7123,high,stress=high|geo_ctx=office_building|size_damp=1.0
+Calendly,Tech,Various,startup,None,0,0.1503,0.4282,-0.229,8.9756,0.0149,0.2572,low,stress=low|geo_ctx=coworking|size_damp=0.5
+Alphabet,Tech,Various,enterprise,None,0,0.0468,-0.0241,0.2242,21.0519,0.0792,0.2676,low,stress=low|geo_ctx=tech_campus|size_damp=1.0
+Dynatrace,Tech,Various,SME,None,0,0.0138,0.1607,-0.2966,12.4821,0.0872,0.4588,low,stress=low|geo_ctx=office_park|size_damp=0.75
+Sonos,Electronics,Various,SME,None,0,0.1232,0.7124,0.0204,22.2639,0.0994,0.123,low,stress=low|geo_ctx=industrial_park|size_damp=0.75
+Nutanix,Tech,Various,SME,None,0,0.2058,0.2237,0.0042,17.8794,0.0879,0.2283,low,stress=low|geo_ctx=office_park|size_damp=0.75
+Oscar Health,Healthcare,Various,SME,None,0,0.1006,1.5854,0.2086,36.0063,0.1369,0.2677,moderate,stress=moderate|geo_ctx=office_park|size_damp=0.75
+Robinhood,Finance,Various,SME,None,0,0.2239,0.7514,0.8303,23.2599,0.1688,0.3079,moderate,stress=moderate|geo_ctx=suburban_office|size_damp=0.75
+Unity Technologies,Tech,Various,SME,None,0,0.3552,0.2955,-0.0777,17.0183,0.0771,0.2444,low,stress=low|geo_ctx=small_office|size_damp=0.75
+JPMorgan Chase,Finance,Various,enterprise,None,0,0.1091,1.226,1.0931,27.435,0.1239,0.09,moderate,stress=moderate|geo_ctx=tech_campus|size_damp=1.0
+Intuit,Tech,Various,enterprise,None,0,0.085,0.0282,0.0367,20.7165,0.082,0.2561,low,stress=low|geo_ctx=tech_campus|size_damp=1.0
+Adidas,Consumer,Various,enterprise,None,0,0.089,0.6188,0.5052,15.7056,0.1231,0.2442,low,stress=low|geo_ctx=tech_campus|size_damp=1.0
+Uber,Tech,Various,enterprise,None,0,0.0832,-0.216,0.1838,12.7329,0.055,0.5371,low,stress=low|geo_ctx=downtown_skyscraper|size_damp=1.0
+Apple,Tech,Various,enterprise,None,0,0.0186,1.8769,0.7542,36.6647,0.0403,0.2401,moderate,stress=moderate|geo_ctx=corporate_campus|size_damp=1.0
+Procore,Construction,Various,SME,None,0,0.0529,0.0714,0.1239,15.1814,0.0471,0.2866,low,stress=low|geo_ctx=office_park|size_damp=0.75
+Tyco International,Security,"Princeton, NJ",enterprise,Embezzlement,1,0.5428,3.7517,0.3,48.219,0.2061,0.6462,high,stress=high|geo_ctx=corporate_campus|size_damp=1.0
+Zapier,Tech,Various,startup,None,0,0.3192,1.1712,0.8804,35.3546,0.1753,0.5081,moderate,stress=moderate|geo_ctx=small_office|size_damp=0.5
+Cal.com,Tech,Various,startup,None,0,0.1094,0.9204,-0.012,10.8461,0.0851,0.1478,low,stress=low|geo_ctx=suburban_office|size_damp=0.5
+Editas Medicine,Biotech,Various,SME,None,0,0.0569,0.7949,0.8802,36.0405,0.0692,0.3393,moderate,stress=moderate|geo_ctx=office_park|size_damp=0.75
+FTX,Crypto,"Nassau, Bahamas",enterprise,Misappropriation,1,0.4411,2.5887,1.1943,43.757,0.158,0.6475,high,stress=high|geo_ctx=luxury_resort_office|size_damp=1.0
+JetBlue Airways,Aviation,Various,SME,None,0,0.3517,-0.1233,-0.2519,15.003,0.01,0.1711,low,stress=low|geo_ctx=commercial|size_damp=0.75
+Target,Retail,Various,enterprise,None,0,0.2341,0.0368,-0.6114,12.9596,0.01,0.1973,low,stress=low|geo_ctx=factory_complex|size_damp=1.0
+SAP,Tech,Various,enterprise,None,0,0.2235,-0.0141,0.3952,18.988,0.163,0.1466,low,stress=low|geo_ctx=factory_complex|size_damp=1.0
+SentinelOne,Cybersecurity,Various,SME,None,0,0.1125,-0.191,0.0298,21.7569,0.0132,0.3315,low,stress=low|geo_ctx=office_park|size_damp=0.75
+PayPal,Finance,Various,enterprise,None,0,0.0686,1.023,0.0062,14.36,0.0727,0.4562,low,stress=low|geo_ctx=downtown_skyscraper|size_damp=1.0
+Spotify,Tech,Various,enterprise,None,0,0.0916,1.1821,-0.1913,15.345,0.0551,0.1667,low,stress=low|geo_ctx=tech_campus|size_damp=1.0
+General Motors,Automotive,Various,enterprise,None,0,0.0525,1.6882,1.5455,27.7606,0.2024,0.1345,high,stress=high|geo_ctx=corporate_campus|size_damp=1.0
+Doximity,Healthcare,Various,SME,None,0,0.1026,1.5731,1.0582,43.1428,0.1046,0.3629,moderate,stress=moderate|geo_ctx=suburban_office|size_damp=0.75
+Upstart,Finance,Various,SME,None,0,0.1131,-0.0131,-0.351,8.0,0.0789,0.5158,low,stress=low|geo_ctx=office_park|size_damp=0.75
+Proto Labs,Manufacturing,Various,SME,None,0,0.1187,-0.2572,0.49,12.2683,0.0921,0.1369,low,stress=low|geo_ctx=office_park|size_damp=0.75
+JFrog,Tech,Various,SME,None,0,0.1873,1.0581,-0.3563,19.5491,0.1054,0.3121,low,stress=low|geo_ctx=small_office|size_damp=0.75
+ExxonMobil,Energy,Various,enterprise,None,0,0.0811,0.2119,0.2815,15.4198,0.0838,0.1807,low,stress=low|geo_ctx=tech_campus|size_damp=1.0
+Nestle,Consumer,Various,enterprise,None,0,0.1321,0.8246,0.0096,14.2329,0.0984,0.1483,low,stress=low|geo_ctx=tech_campus|size_damp=1.0
+Dropbox,Tech,Various,SME,None,0,0.1936,0.0603,-0.0965,28.3837,0.0953,0.3145,low,stress=low|geo_ctx=suburban_office|size_damp=0.75
+Agilon Health,Healthcare,Various,SME,None,0,0.0187,0.5042,0.2357,20.1273,0.0413,0.2428,low,stress=low|geo_ctx=office_park|size_damp=0.75
+Nike,Consumer,Various,enterprise,None,0,0.1325,0.1603,0.554,12.6496,0.019,0.1462,low,stress=low|geo_ctx=office_building|size_damp=1.0
+Lockheed Martin,Aerospace,Various,enterprise,None,0,0.1311,-0.4281,-0.2181,16.7624,0.077,0.3431,low,stress=low|geo_ctx=office_building|size_damp=1.0
+Honeywell,Industrial,Various,enterprise,None,0,0.0507,0.612,-0.1004,15.9818,0.0418,0.3135,low,stress=low|geo_ctx=corporate_campus|size_damp=1.0
+Hims & Hers,Healthcare,Various,SME,None,0,0.2842,2.5008,1.0262,15.6747,0.1577,0.3872,moderate,stress=moderate|geo_ctx=small_office|size_damp=0.75
+Lenovo,Tech,Various,enterprise,None,0,0.0222,0.3762,-0.0059,20.7624,0.089,0.4546,low,stress=low|geo_ctx=corporate_campus|size_damp=1.0
+Bill.com,Finance,Various,SME,None,0,0.1118,0.6756,0.4262,15.1463,0.0467,0.3207,low,stress=low|geo_ctx=industrial_park|size_damp=0.75
+AbbVie,Pharma,Various,enterprise,None,0,0.077,1.2553,2.2316,48.3353,0.0604,0.3061,high,stress=high|geo_ctx=corporate_campus|size_damp=1.0
+Visa,Finance,Various,enterprise,None,0,0.058,0.5559,0.0247,23.3274,0.0593,0.4614,low,stress=low|geo_ctx=downtown_skyscraper|size_damp=1.0
+Hin Leong Trading,Oil Trading,Singapore,enterprise,Loss Concealment,1,0.5115,1.3508,0.7861,19.8193,0.1771,0.7353,moderate,stress=moderate|geo_ctx=commercial|size_damp=1.0
+Goldman Sachs,Finance,Various,enterprise,None,0,0.0935,3.2674,3.5072,32.3265,0.2611,0.2775,high,stress=high|geo_ctx=downtown_skyscraper|size_damp=1.0
+PostHog,Tech,Various,startup,None,0,0.1484,-0.1539,-0.0519,26.5585,0.0251,0.01,low,stress=low|geo_ctx=small_office|size_damp=0.5
+Caterpillar,Industrial,Various,enterprise,None,0,0.1624,-0.3341,0.1141,21.0529,0.1024,0.4121,low,stress=low|geo_ctx=factory_complex|size_damp=1.0
+Anduril,Defense,Various,startup,None,0,0.3453,0.5821,-0.2957,20.5202,0.0588,0.1311,low,stress=low|geo_ctx=residential|size_damp=0.5
+Palo Alto Networks,Cybersecurity,Various,enterprise,None,0,0.1163,2.203,1.6246,36.4586,0.1712,0.4189,moderate,stress=moderate|geo_ctx=corporate_campus|size_damp=1.0
+DocuSign,Tech,Various,enterprise,None,0,0.0333,2.1406,0.2208,12.6084,0.142,0.2547,moderate,stress=moderate|geo_ctx=downtown_skyscraper|size_damp=1.0
+LG,Electronics,Various,enterprise,None,0,0.1279,0.8951,0.7464,28.1028,0.0808,0.4272,moderate,stress=moderate|geo_ctx=tech_campus|size_damp=1.0
+Walmart,Retail,Various,enterprise,None,0,0.0411,0.7503,-0.045,18.6279,0.0731,0.2523,low,stress=low|geo_ctx=downtown_skyscraper|size_damp=1.0
+Luckin Coffee (2),Retail,"Beijing, China",enterprise,Sales Fabrication,1,0.1122,1.7497,2.3605,45.1379,0.2361,0.95,high,stress=high|geo_ctx=commercial|size_damp=1.0
+Fortinet,Cybersecurity,Various,enterprise,None,0,0.0824,-0.0588,0.2095,19.9674,0.1158,0.3453,low,stress=low|geo_ctx=tech_campus|size_damp=1.0
+Twilio,Tech,Various,SME,None,0,0.3306,-0.1689,0.2609,24.7782,0.0965,0.5315,low,stress=low|geo_ctx=small_office|size_damp=0.75
+Autonomy,Tech,"Cambridge, UK",enterprise,Revenue Fabrication,1,0.6388,1.5873,0.4292,27.5833,0.02,0.4156,moderate,stress=moderate|geo_ctx=tech_campus|size_damp=1.0
+Accenture,Consulting,Various,enterprise,None,0,0.1727,1.1349,0.8388,32.1661,0.0791,0.6439,moderate,stress=moderate|geo_ctx=factory_complex|size_damp=1.0
+ServiceNow,Tech,Various,enterprise,None,0,0.0856,0.3158,0.9293,26.9668,0.0967,0.0908,moderate,stress=moderate|geo_ctx=tech_campus|size_damp=1.0
+Coca-Cola,Consumer,Various,enterprise,None,0,0.0949,1.8151,2.0501,35.2234,0.2335,0.3,high,stress=high|geo_ctx=corporate_campus|size_damp=1.0
+Abraaj Group,Private Equity,"Dubai, UAE",enterprise,Fund Misuse,1,0.0671,0.6542,0.2862,21.257,0.0674,0.7366,low,stress=low|geo_ctx=downtown_skyscraper|size_damp=1.0
+Lehman Brothers,Finance,"745 Seventh Ave, NY",enterprise,Risk Concealment,1,0.0603,0.3185,0.9296,25.3044,0.0862,0.7101,moderate,stress=moderate|geo_ctx=downtown_skyscraper|size_damp=1.0
+Flywire,Finance,Various,SME,None,0,0.2152,1.4373,0.79,33.7244,0.1895,0.4137,moderate,stress=moderate|geo_ctx=industrial_park|size_damp=0.75
+Wells Fargo,Banking,"San Francisco, CA",enterprise,Fake Accounts,1,0.0397,0.7989,0.7355,30.8284,0.2143,0.6314,moderate,stress=moderate|geo_ctx=downtown_skyscraper|size_damp=1.0
+Costco,Retail,Various,enterprise,None,0,0.0741,0.2895,-0.0049,23.942,0.18,0.1704,low,stress=low|geo_ctx=office_building|size_damp=1.0
+Procter & Gamble,Consumer,Various,enterprise,None,0,0.1513,0.8706,0.0981,16.9045,0.1132,0.01,low,stress=low|geo_ctx=factory_complex|size_damp=1.0
+Snap Inc,Tech,Various,SME,None,0,0.1441,0.3968,-0.3961,27.1573,0.1272,0.1796,low,stress=low|geo_ctx=suburban_office|size_damp=0.75
+Morgan Stanley,Finance,Various,enterprise,None,0,0.0468,-0.2141,-0.1661,12.0106,0.1586,0.2553,low,stress=low|geo_ctx=downtown_skyscraper|size_damp=1.0
+Levi's,Consumer,Various,enterprise,None,0,0.0289,-0.3634,-0.467,21.03,0.0288,0.5132,low,stress=low|geo_ctx=downtown_skyscraper|size_damp=1.0
+Olympus,Electronics,"Tokyo, Japan",enterprise,Loss Concealment,1,0.602,1.5909,0.3052,18.7568,0.1461,0.6535,moderate,stress=moderate|geo_ctx=downtown_skyscraper|size_damp=1.0
+Petrobras,Energy,"Rio de Janeiro, Brazil",enterprise,Bribery/Corruption,1,0.6214,-0.0772,0.2699,19.5365,0.1125,0.7133,low,stress=low|geo_ctx=downtown_skyscraper|size_damp=1.0
+Retool,Tech,Various,startup,None,0,0.3065,1.4943,1.468,30.7627,0.0602,0.3967,moderate,stress=moderate|geo_ctx=residential|size_damp=0.5
+DraftKings,Gaming,Various,SME,None,0,0.4105,0.9021,-0.0747,22.8579,0.1058,0.4553,low,stress=low|geo_ctx=suburban_office|size_damp=0.75
+C3.ai,Tech,Various,SME,None,0,0.1281,-0.1357,-0.3134,8.1682,0.1622,0.0845,low,stress=low|geo_ctx=industrial_park|size_damp=0.75
+Palantir,Tech,Various,enterprise,None,0,0.0791,0.8264,-0.1697,34.1883,0.1568,0.2878,moderate,stress=moderate|geo_ctx=tech_campus|size_damp=1.0
+HP,Tech,Various,enterprise,None,0,0.0856,0.8131,-0.0326,20.0086,0.1076,0.1898,low,stress=low|geo_ctx=corporate_campus|size_damp=1.0
+Webflow,Tech,Various,startup,None,0,0.3317,1.682,1.2758,19.4067,0.1499,0.4352,moderate,stress=moderate|geo_ctx=residential|size_damp=0.5
+CVS Health,Healthcare,Various,enterprise,None,0,0.1833,0.6057,-0.5523,11.6021,0.055,0.2539,low,stress=low|geo_ctx=office_building|size_damp=1.0
+Datadog,Tech,Various,SME,None,0,0.2991,0.2293,-0.387,11.5246,0.0666,0.5004,low,stress=low|geo_ctx=suburban_office|size_damp=0.75
+CrowdStrike,Cybersecurity,Various,SME,None,0,0.2133,0.3567,-0.4437,18.9168,0.0794,0.3369,low,stress=low|geo_ctx=small_office|size_damp=0.75
+Salesforce,Tech,Various,enterprise,None,0,0.0109,0.4679,0.11,13.3006,0.0594,0.0911,low,stress=low|geo_ctx=downtown_skyscraper|size_damp=1.0
+Toyota,Automotive,Various,enterprise,None,0,0.0817,1.1972,-0.0018,22.1925,0.0833,0.2352,low,stress=low|geo_ctx=corporate_campus|size_damp=1.0
+Noble Group,Commodities,Hong Kong,enterprise,Mark-to-Market Fraud,1,0.1143,3.0071,0.5824,41.8645,0.1537,0.8534,high,stress=high|geo_ctx=downtown_skyscraper|size_damp=1.0
+MiMedx,Biotech,"Marietta, GA",SME,Revenue Manipulation,1,0.5064,-0.1429,-0.3213,20.4124,0.0711,0.7285,low,stress=low|geo_ctx=office_park|size_damp=0.75
+Tesla,Automotive,Various,enterprise,None,0,0.1057,3.5633,2.1376,47.09,0.1937,0.466,high,stress=high|geo_ctx=tech_campus|size_damp=1.0
+Lucid Motors,Automotive,Various,SME,None,0,0.2951,-0.0205,-0.2455,17.9831,0.0732,0.182,low,stress=low|geo_ctx=suburban_office|size_damp=0.75
+Panasonic,Electronics,Various,enterprise,None,0,0.1987,1.6777,0.8354,38.3427,0.0629,0.301,moderate,stress=moderate|geo_ctx=factory_complex|size_damp=1.0
+Ford,Automotive,Various,enterprise,None,0,0.073,-0.1023,0.161,13.5077,0.0811,0.2486,low,stress=low|geo_ctx=tech_campus|size_damp=1.0
+Varonis,Cybersecurity,Various,SME,None,0,0.1386,2.6739,2.609,44.9568,0.2105,0.3047,high,stress=high|geo_ctx=industrial_park|size_damp=0.75
+Luckin Coffee,Retail,"Xiamen, China",enterprise,Revenue Fabrication,1,0.3684,1.3702,3.026,37.7422,0.2047,0.4435,high,stress=high|geo_ctx=commercial|size_damp=1.0
+ClickUp,Tech,Various,startup,None,0,0.4734,0.1004,0.173,19.5563,0.18,0.4179,low,stress=low|geo_ctx=residential|size_damp=0.5
+Lernout & Hauspie,Tech,"Ieper, Belgium",SME,Revenue Fabrication,1,0.2936,2.4082,2.3535,48.6576,0.116,0.6398,high,stress=high|geo_ctx=office_park|size_damp=0.75
+McDonald's,Consumer,Various,enterprise,None,0,0.0767,0.205,0.0293,14.135,0.081,0.3247,low,stress=low|geo_ctx=corporate_campus|size_damp=1.0
+HealthSouth,Healthcare,"Birmingham, AL",enterprise,Accounting Fraud,1,0.5269,1.0494,0.2086,22.9611,0.097,0.7903,moderate,stress=moderate|geo_ctx=office_building|size_damp=1.0
+Fastly,Tech,Various,SME,None,0,0.0213,0.705,-0.1656,30.0,0.0574,0.2777,low,stress=low|geo_ctx=office_park|size_damp=0.75
+Boeing,Aerospace,Various,enterprise,None,0,0.0855,-0.0903,0.056,14.2231,0.0555,0.039,low,stress=low|geo_ctx=corporate_campus|size_damp=1.0
+Okta,Cybersecurity,Various,SME,None,0,0.1715,0.7963,0.0446,16.3146,0.0555,0.2046,low,stress=low|geo_ctx=commercial|size_damp=0.75
+Loom,Tech,Various,startup,None,0,0.1125,0.3583,0.1482,19.3034,0.058,0.1493,low,stress=low|geo_ctx=suburban_office|size_damp=0.5
+Under Armour,Retail,"Baltimore, MD",enterprise,Revenue Pulling,1,0.1029,1.5856,2.2505,45.6078,0.2758,0.8897,high,stress=high|geo_ctx=office_building|size_damp=1.0
+LVMH,Luxury,Various,enterprise,None,0,0.111,-0.3479,-0.0265,30.0,0.0479,0.4959,low,stress=low|geo_ctx=factory_complex|size_damp=1.0
+Supabase,Tech,Various,startup,None,0,0.1861,0.1481,0.0131,17.265,0.1186,0.5816,low,stress=low|geo_ctx=coworking|size_damp=0.5
+Teladoc,Healthcare,Various,SME,None,0,0.1995,3.1508,2.9138,40.21,0.2477,0.2035,high,stress=high|geo_ctx=industrial_park|size_damp=0.75
+Zillow Group,Real Estate,Various,SME,None,0,0.0879,0.2973,-0.0724,19.7603,0.0299,0.4666,low,stress=low|geo_ctx=office_park|size_damp=0.75
+Definitive Healthcare,Healthcare,Various,SME,None,0,0.1618,1.9697,1.0182,57.4958,0.1129,0.1461,high,stress=high|geo_ctx=suburban_office|size_damp=0.75
+Meta,Tech,Various,enterprise,None,0,0.228,0.1616,0.3448,14.4841,0.0786,0.5156,low,stress=low|geo_ctx=office_building|size_damp=1.0
+Garmin,Electronics,Various,SME,None,0,0.3676,0.3018,0.1013,15.9406,0.0605,0.1851,low,stress=low|geo_ctx=small_office|size_damp=0.75
+Sephora,Retail,Various,enterprise,None,0,0.1459,-0.4282,-0.2969,22.7039,0.0407,0.2163,low,stress=low|geo_ctx=office_building|size_damp=1.0
+Afinsa,Collectibles,"Madrid, Spain",SME,Ponzi Scheme,1,0.4546,0.8887,0.7168,24.549,0.0905,0.7529,moderate,stress=moderate|geo_ctx=commercial|size_damp=0.75
+Parmalat,Food & Beverage,"Collecchio, Italy",enterprise,Accounting Fraud,1,0.1564,0.9099,1.8462,43.5711,0.3035,0.6067,high,stress=high|geo_ctx=factory_complex|size_damp=1.0
+Merck,Pharma,Various,enterprise,None,0,0.0613,1.3733,0.7812,31.3393,0.1238,0.1376,moderate,stress=moderate|geo_ctx=tech_campus|size_damp=1.0
+BHP,Mining,Various,enterprise,None,0,0.0588,-0.3426,0.1399,17.8218,0.0154,0.4247,low,stress=low|geo_ctx=downtown_skyscraper|size_damp=1.0
+Shopify,Tech,Various,enterprise,None,0,0.118,-0.394,-0.7662,22.6716,0.0253,0.2163,low,stress=low|geo_ctx=tech_campus|size_damp=1.0
+Enron,Energy,"1400 Smith St, Houston, TX",enterprise,Accounting Fraud,1,0.6493,2.3894,2.4534,55.2303,0.1836,0.6579,high,stress=high|geo_ctx=downtown_skyscraper|size_damp=1.0
+Microsoft,Tech,Various,enterprise,None,0,0.075,0.3837,-0.021,9.6952,0.0972,0.2812,low,stress=low|geo_ctx=downtown_skyscraper|size_damp=1.0
+Miro,Tech,Various,startup,None,0,0.1822,0.7135,1.2786,26.8903,0.1186,0.19,moderate,stress=moderate|geo_ctx=small_office|size_damp=0.5
+Five9,Tech,Various,SME,None,0,0.0885,2.127,1.2884,32.0747,0.1087,0.1861,moderate,stress=moderate|geo_ctx=industrial_park|size_damp=0.75
+Global-e,Retail,Various,SME,None,0,0.2562,1.3732,1.1992,12.0,0.2244,0.3091,moderate,stress=moderate|geo_ctx=commercial|size_damp=0.75
+Unilever,Consumer,Various,enterprise,None,0,0.095,-0.3325,-0.5509,20.54,0.0359,0.01,low,stress=low|geo_ctx=factory_complex|size_damp=1.0
+Siemens,Industrial,Various,enterprise,None,0,0.1374,1.4772,0.0896,14.241,0.0629,0.4223,low,stress=low|geo_ctx=factory_complex|size_damp=1.0
+Patisserie Valerie,Retail,"Birmingham, UK",SME,Accounting Fraud,1,0.1078,2.8789,1.3564,55.4993,0.1452,0.642,high,stress=high|geo_ctx=commercial|size_damp=0.75
+American Express,Finance,Various,enterprise,None,0,0.0798,-0.3004,0.2772,17.0755,0.0591,0.4074,low,stress=low|geo_ctx=corporate_campus|size_damp=1.0
+WeWork,Real Estate,"115 W 18th St, NY",enterprise,Valuation Fraud,1,0.7562,3.245,1.4125,36.9079,0.2232,0.8756,high,stress=high|geo_ctx=downtown_office|size_damp=1.0
+Starbucks,Consumer,Various,enterprise,None,0,0.0485,0.4699,-0.3368,19.912,0.0867,0.3239,low,stress=low|geo_ctx=downtown_skyscraper|size_damp=1.0
+SoFi,Finance,Various,SME,None,0,0.1668,0.6373,1.7783,28.9045,0.1255,0.4389,moderate,stress=moderate|geo_ctx=industrial_park|size_damp=0.75
+Jasper AI,Tech,Various,startup,None,0,0.4802,0.2792,-0.1954,15.5806,0.0672,0.3136,low,stress=low|geo_ctx=residential|size_damp=0.5
+Broadcom,Tech,Various,enterprise,None,0,0.0799,1.8946,1.0047,55.0133,0.1774,0.2124,high,stress=high|geo_ctx=downtown_skyscraper|size_damp=1.0
+GitLab,Tech,Various,SME,None,0,0.1584,0.2682,0.0482,18.0152,0.0975,0.4286,low,stress=low|geo_ctx=commercial|size_damp=0.75
+HubSpot,Tech,Various,SME,None,0,0.2737,0.3301,0.655,20.1623,0.0553,0.5041,moderate,stress=moderate|geo_ctx=commercial|size_damp=0.75
+UiPath,Tech,Various,SME,None,0,0.0485,0.8118,-0.0474,15.8656,0.0395,0.01,low,stress=low|geo_ctx=industrial_park|size_damp=0.75
+Rivian,Automotive,Various,SME,None,0,0.1387,0.0051,-0.1777,13.68,0.0819,0.1254,low,stress=low|geo_ctx=commercial|size_damp=0.75
+Prada,Luxury,Various,enterprise,None,0,0.0181,0.3713,-0.0561,22.9286,0.1275,0.6384,low,stress=low|geo_ctx=downtown_skyscraper|size_damp=1.0
+Bausch Health,Pharma,"Laval, Quebec",enterprise,Price Manipulation,1,0.2319,0.3895,-0.3574,21.2828,0.041,0.7417,low,stress=low|geo_ctx=office_park|size_damp=1.0
+Disney,Media,Various,enterprise,None,0,0.0511,0.248,0.1841,12.886,0.0697,0.01,low,stress=low|geo_ctx=downtown_skyscraper|size_damp=1.0
+Amazon,Tech,Various,enterprise,None,0,0.2143,0.0839,0.0802,19.6085,0.0533,0.3988,low,stress=low|geo_ctx=factory_complex|size_damp=1.0
+Lemonade,Insurance,Various,SME,None,0,0.2493,1.1749,0.7044,21.6471,0.0912,0.4433,moderate,stress=moderate|geo_ctx=suburban_office|size_damp=0.75
+Elastic,Tech,Various,SME,None,0,0.1617,-0.0045,-0.2969,17.3711,0.0822,0.4141,low,stress=low|geo_ctx=office_park|size_damp=0.75
+MongoDB,Tech,Various,SME,None,0,0.1386,0.219,-0.2581,16.0772,0.1203,0.1635,low,stress=low|geo_ctx=commercial|size_damp=0.75
+Pinterest,Tech,Various,SME,None,0,0.1148,-0.1873,0.0316,11.3299,0.0559,0.298,low,stress=low|geo_ctx=office_park|size_damp=0.75
+Citigroup,Finance,Various,enterprise,None,0,0.0363,0.0734,0.3639,18.7086,0.1728,0.309,low,stress=low|geo_ctx=tech_campus|size_damp=1.0
+Home Depot,Retail,Various,enterprise,None,0,0.0854,-0.3407,-0.2928,23.2682,0.042,0.6449,low,stress=low|geo_ctx=factory_complex|size_damp=1.0
+BMW,Automotive,Various,enterprise,None,0,0.2088,-0.061,-0.1339,8.5523,0.0619,0.01,low,stress=low|geo_ctx=factory_complex|size_damp=1.0
+Coupa Software,Tech,Various,SME,None,0,0.1684,0.8016,-0.7953,23.4575,0.1298,0.01,low,stress=low|geo_ctx=commercial|size_damp=0.75
+Gilead,Pharma,Various,enterprise,None,0,0.18,0.4772,0.0529,16.1649,0.0469,0.2629,low,stress=low|geo_ctx=factory_complex|size_damp=1.0
+Madoff Securities,Finance,"New York, NY",SME,Ponzi Scheme,1,0.4424,0.8999,0.8279,25.3028,0.1257,0.7192,moderate,stress=moderate|geo_ctx=downtown_office|size_damp=0.75
+Monday.com,Tech,Various,SME,None,0,0.1757,0.4744,0.3175,9.2063,0.0327,0.01,low,stress=low|geo_ctx=small_office|size_damp=0.75
+GE Aerospace,Industrial,Various,enterprise,None,0,0.1468,0.7086,0.2165,12.3547,0.059,0.3234,low,stress=low|geo_ctx=office_building|size_damp=1.0
+Splunk,Tech,Various,enterprise,None,0,0.1239,0.4563,-0.1714,20.8629,0.136,0.3887,low,stress=low|geo_ctx=corporate_campus|size_damp=1.0
+Eli Lilly,Pharma,Various,enterprise,None,0,0.169,0.5616,0.3676,35.3721,0.118,0.4322,moderate,stress=moderate|geo_ctx=factory_complex|size_damp=1.0
+Chewy,Retail,Various,SME,None,0,0.2902,-0.4841,-0.4045,21.7163,0.0868,0.2224,low,stress=low|geo_ctx=small_office|size_damp=0.75
+Waste Management Inc,Utilities,"Houston, TX",enterprise,Accounting Fraud,1,0.0874,1.5018,3.1427,25.6986,0.1692,0.7235,high,stress=high|geo_ctx=office_building|size_damp=1.0
+ZoomInfo,Tech,Various,SME,None,0,0.3134,0.0701,-0.7498,29.4547,0.0244,0.01,low,stress=low|geo_ctx=suburban_office|size_damp=0.75
+Rolex,Luxury,Various,enterprise,None,0,0.1203,-0.0214,0.1707,26.142,0.0648,0.2195,low,stress=low|geo_ctx=corporate_campus|size_damp=1.0
+Descript,Media,Various,startup,None,0,0.3508,-0.3247,-0.3195,16.4739,0.0556,0.222,low,stress=low|geo_ctx=residential|size_damp=0.5
+Amplitude,Tech,Various,SME,None,0,0.1391,-0.1197,-0.1448,13.2334,0.0849,0.4937,low,stress=low|geo_ctx=commercial|size_damp=0.75
+Pfizer,Pharma,Various,enterprise,None,0,0.2709,0.0401,0.0674,22.663,0.0233,0.01,low,stress=low|geo_ctx=factory_complex|size_damp=1.0
+ASML,Tech,Various,enterprise,None,0,0.0667,0.2304,0.1616,13.3966,0.0868,0.0379,low,stress=low|geo_ctx=downtown_skyscraper|size_damp=1.0
+Affirm,Finance,Various,SME,None,0,0.2933,0.3125,0.0313,17.687,0.0498,0.2079,low,stress=low|geo_ctx=suburban_office|size_damp=0.75
+Theranos,HealthTech,"Palo Alto, CA",enterprise,Product Fraud,1,0.0839,2.1261,0.7946,20.596,0.1611,0.3802,moderate,stress=moderate|geo_ctx=office_park|size_damp=1.0
+UnitedHealth,Healthcare,Various,enterprise,None,0,0.1758,0.0427,0.0086,24.3923,0.0876,0.257,low,stress=low|geo_ctx=factory_complex|size_damp=1.0
+Pure Storage,Tech,Various,SME,None,0,0.093,0.4064,-0.4688,15.3547,0.1118,0.0619,low,stress=low|geo_ctx=office_park|size_damp=0.75
+Cloudflare,Tech,Various,SME,None,0,0.2174,0.4589,-0.145,25.8699,0.031,0.0303,low,stress=low|geo_ctx=commercial|size_damp=0.75
+Freshworks,Tech,Various,SME,None,0,0.1069,1.0933,0.9244,38.3275,0.1629,0.306,moderate,stress=moderate|geo_ctx=industrial_park|size_damp=0.75
+Toshiba,Conglomerate,"Tokyo, Japan",enterprise,Accounting Fraud,1,0.0744,1.5153,2.1592,53.0714,0.0875,0.7332,high,stress=high|geo_ctx=downtown_skyscraper|size_damp=1.0
+WorldCom,Telecom,"Clinton, MS",enterprise,Accounting Fraud,1,0.3251,0.9323,1.0703,41.9686,0.2517,0.7308,high,stress=high|geo_ctx=suburban_office|size_damp=1.0
+Tencent,Tech,Various,enterprise,None,0,0.0272,2.6203,2.2392,58.7617,0.2665,0.1635,high,stress=high|geo_ctx=downtown_skyscraper|size_damp=1.0
+PagerDuty,Tech,Various,SME,None,0,0.3701,-0.4093,-0.1677,19.8861,0.1426,0.2401,low,stress=low|geo_ctx=small_office|size_damp=0.75
+Bose,Electronics,Various,SME,None,0,0.0935,0.7694,1.4092,31.7724,0.0681,0.3014,moderate,stress=moderate|geo_ctx=office_park|size_damp=0.75
+Airbnb,Tech,Various,enterprise,None,0,0.0481,0.3315,0.0964,20.1096,0.1445,0.318,low,stress=low|geo_ctx=downtown_skyscraper|size_damp=1.0
+Phreesia,Healthcare,Various,SME,None,0,0.2109,-0.0187,-0.0098,15.2829,0.0515,0.266,low,stress=low|geo_ctx=small_office|size_damp=0.75
+Nikola Corporation,Automotive,"Phoenix, AZ",SME,Product Fraud,1,0.3406,0.1257,-0.3319,12.019,0.1125,0.8441,low,stress=low|geo_ctx=industrial_park|size_damp=0.75
+3M,Industrial,Various,enterprise,None,0,0.0777,1.297,1.2295,20.8144,0.1266,0.225,moderate,stress=moderate|geo_ctx=office_building|size_damp=1.0
+NMC Health,Healthcare,"Abu Dhabi, UAE",enterprise,Accounting Fraud,1,0.7082,1.7725,2.982,25.9815,0.2411,0.95,high,stress=high|geo_ctx=commercial|size_damp=1.0
+Canva,Tech,Various,startup,None,0,0.222,-0.0628,-0.3141,20.6833,0.1274,0.3578,low,stress=low|geo_ctx=suburban_office|size_damp=0.5
+Dell,Tech,Various,enterprise,None,0,0.1247,0.2739,-0.2575,21.5015,0.057,0.2683,low,stress=low|geo_ctx=office_building|size_damp=1.0
+Airtable,Tech,Various,startup,None,0,0.1248,2.2746,1.0589,30.8135,0.1297,0.1348,high,stress=high|geo_ctx=suburban_office|size_damp=0.5
+Figma,Tech,Various,startup,None,0,0.303,3.95,2.4954,34.3753,0.2443,0.3959,high,stress=high|geo_ctx=residential|size_damp=0.5
+Amgen,Pharma,Various,enterprise,None,0,0.06,1.9012,3.0858,41.1567,0.2826,0.2601,high,stress=high|geo_ctx=downtown_skyscraper|size_damp=1.0
+Novartis,Pharma,Various,enterprise,None,0,0.0644,0.2896,-0.2371,20.3573,0.1553,0.4518,low,stress=low|geo_ctx=downtown_skyscraper|size_damp=1.0
+Samsung,Tech,Various,enterprise,None,0,0.0999,0.0025,-0.467,15.8594,0.14,0.3775,low,stress=low|geo_ctx=corporate_campus|size_damp=1.0
+Stripe,Finance,Various,enterprise,None,0,0.101,0.2856,-0.0337,16.8952,0.1046,0.3636,low,stress=low|geo_ctx=factory_complex|size_damp=1.0
+HashiCorp,Tech,Various,SME,None,0,0.0889,3.4382,2.3805,36.2939,0.254,0.01,high,stress=high|geo_ctx=office_park|size_damp=0.75
+Medtronic,Healthcare,Various,enterprise,None,0,0.1465,0.0172,-0.1807,20.3439,0.0401,0.2953,low,stress=low|geo_ctx=tech_campus|size_damp=1.0
+Kraft Heinz,Food & Beverage,"Chicago, IL",enterprise,Accounting Fraud,1,0.6446,0.1709,-0.254,10.4258,0.0621,0.7542,low,stress=low|geo_ctx=downtown_skyscraper|size_damp=1.0
+Warby Parker,Consumer,Various,SME,None,0,0.2317,0.0514,-0.4223,14.1109,0.0356,0.5128,low,stress=low|geo_ctx=small_office|size_damp=0.75
+Roblox,Gaming,Various,SME,None,0,0.0133,0.1778,0.1152,17.8365,0.01,0.2366,low,stress=low|geo_ctx=office_park|size_damp=0.75
+Grammarly,Tech,Various,SME,None,0,0.3445,0.4225,0.1368,28.825,0.0543,0.3892,low,stress=low|geo_ctx=suburban_office|size_damp=0.75
+Confluent,Tech,Various,SME,None,0,0.1394,-0.1193,-0.4138,14.3453,0.0787,0.5192,low,stress=low|geo_ctx=industrial_park|size_damp=0.75
+Workday,Tech,Various,enterprise,None,0,0.1415,0.3678,-0.2662,15.8127,0.1089,0.1941,low,stress=low|geo_ctx=factory_complex|size_damp=1.0
+Alignment Healthcare,Healthcare,Various,SME,None,0,0.1263,0.48,1.4378,22.0713,0.0704,0.09,moderate,stress=moderate|geo_ctx=suburban_office|size_damp=0.75
+Relativity Space,Aerospace,Various,startup,None,0,0.2187,0.831,-0.0286,19.3951,0.1043,0.278,low,stress=low|geo_ctx=coworking|size_damp=0.5
+New Relic,Tech,Various,SME,None,0,0.1477,-0.0303,-0.0825,8.0,0.0194,0.455,low,stress=low|geo_ctx=commercial|size_damp=0.75
+Sony,Electronics,Various,enterprise,None,0,0.0641,1.6475,0.682,36.7342,0.0863,0.3718,moderate,stress=moderate|geo_ctx=office_building|size_damp=1.0
+MF Global,Finance,"New York, NY",enterprise,Risk Concealment,1,0.1137,3.326,0.9364,35.1577,0.2887,0.5726,high,stress=high|geo_ctx=downtown_skyscraper|size_damp=1.0
+Steinhoff International,Retail,"Stellenbosch, South Africa",enterprise,Accounting Fraud,1,0.5694,0.5875,-0.2106,16.3617,0.0643,0.3366,low,stress=low|geo_ctx=commercial|size_damp=1.0
+Volkswagen,Automotive,"Wolfsburg, Germany",enterprise,Emissions Fraud,1,0.6015,0.1702,-0.5756,17.8674,0.0824,0.95,low,stress=low|geo_ctx=factory_complex|size_damp=1.0
+Asana,Tech,Various,SME,None,0,0.3314,1.8135,0.7599,26.5743,0.0761,0.206,moderate,stress=moderate|geo_ctx=small_office|size_damp=0.75
+Scale AI,Tech,Various,startup,None,0,0.1683,-0.1616,-0.2207,24.1805,0.1237,0.3414,low,stress=low|geo_ctx=small_office|size_damp=0.5
+Zscaler,Cybersecurity,Various,SME,None,0,0.1965,0.4058,0.2135,12.3768,0.0186,0.4417,low,stress=low|geo_ctx=commercial|size_damp=0.75
+BlackRock,Finance,Various,enterprise,None,0,0.0432,1.3837,1.1654,22.3777,0.1946,0.2893,moderate,stress=moderate|geo_ctx=downtown_skyscraper|size_damp=1.0
+Cartier,Luxury,Various,enterprise,None,0,0.0845,0.4809,1.1677,23.323,0.2137,0.492,moderate,stress=moderate|geo_ctx=tech_campus|size_damp=1.0
+Berkshire Hathaway,Finance,Various,enterprise,None,0,0.0563,-0.6167,-0.0742,14.5901,0.0399,0.2078,low,stress=low|geo_ctx=downtown_skyscraper|size_damp=1.0
+Moderna,Pharma,Various,enterprise,None,0,0.1122,0.9465,0.6116,29.6243,0.0476,0.1189,moderate,stress=moderate|geo_ctx=office_building|size_damp=1.0
+Beyond Meat,Food,Various,SME,None,0,0.2219,0.2937,0.4652,13.0082,0.1194,0.2179,low,stress=low|geo_ctx=suburban_office|size_damp=0.75
+Celsius Network,Crypto,"Hoboken, NJ",SME,Misappropriation,1,0.2874,1.6136,0.8052,38.1747,0.1068,0.95,moderate,stress=moderate|geo_ctx=small_office|size_damp=0.75
+Oracle,Tech,Various,enterprise,None,0,0.0631,0.4785,0.5547,23.6328,0.0692,0.084,low,stress=low|geo_ctx=corporate_campus|size_damp=1.0
+Chevron,Energy,Various,enterprise,None,0,0.0958,0.5777,0.0885,38.4723,0.1527,0.3217,moderate,stress=moderate|geo_ctx=factory_complex|size_damp=1.0
+Snowflake,Tech,Various,enterprise,None,0,0.129,0.3303,0.0583,16.2342,0.0935,0.2057,low,stress=low|geo_ctx=office_building|size_damp=1.0
+Abercrombie & Fitch,Retail,Various,SME,None,0,0.1477,0.6413,0.0343,18.7515,0.0655,0.2415,low,stress=low|geo_ctx=industrial_park|size_damp=0.75
+Greensill Capital,Finance,"London, UK",SME,Credit Fraud,1,0.2966,2.3105,1.6602,40.8187,0.362,0.3639,high,stress=high|geo_ctx=small_office|size_damp=0.75
+DigitalOcean,Tech,Various,SME,None,0,0.4062,0.2546,-0.1096,18.9234,0.0261,0.1043,low,stress=low|geo_ctx=suburban_office|size_damp=0.75
+AstraZeneca,Pharma,Various,enterprise,None,0,0.1071,0.0449,0.0858,19.6723,0.1063,0.5515,low,stress=low|geo_ctx=factory_complex|size_damp=1.0
+Peloton,Consumer,Various,SME,None,0,0.1508,0.6177,0.2046,27.2335,0.1034,0.1961,low,stress=low|geo_ctx=commercial|size_damp=0.75
+Samsara,Industrial,Various,SME,None,0,0.0376,0.8786,0.0633,17.5164,0.0582,0.3099,low,stress=low|geo_ctx=suburban_office|size_damp=0.75
+FirstEnergy,Energy,"Akron, OH",enterprise,Bribery/Corruption,1,0.6092,0.3044,0.0015,16.8271,0.0234,0.5243,low,stress=low|geo_ctx=office_building|size_damp=1.0
+Cisco Systems,Tech,Various,enterprise,None,0,0.1115,0.4595,-0.0501,18.7336,0.1283,0.1275,low,stress=low|geo_ctx=corporate_campus|size_damp=1.0
+Wayfair,Retail,Various,SME,None,0,0.1898,0.6694,0.0543,11.5158,0.096,0.1523,low,stress=low|geo_ctx=industrial_park|size_damp=0.75
+Veeva Systems,Healthcare,Various,enterprise,None,0,0.0703,0.956,1.6629,23.76,0.1571,0.3749,moderate,stress=moderate|geo_ctx=downtown_skyscraper|size_damp=1.0
+Columbia Sportswear,Consumer,Various,SME,None,0,0.2796,-0.2839,0.5018,20.0951,0.0518,0.2416,low,stress=low|geo_ctx=commercial|size_damp=0.75
+Wirecard,Fintech,"Aschheim, Munich, Germany",enterprise,Revenue Fabrication,1,0.4895,3.1139,1.6714,45.4256,0.1676,0.6162,high,stress=high|geo_ctx=suburban_office|size_damp=1.0
+Puma,Consumer,Various,enterprise,None,0,0.1119,-0.227,0.0073,25.0611,0.0768,0.3179,low,stress=low|geo_ctx=downtown_skyscraper|size_damp=1.0
+Hyflux,Utilities,Singapore,SME,Debt Concealment,1,0.3052,1.5398,0.5079,29.5152,0.1223,0.4827,moderate,stress=moderate|geo_ctx=office_building|size_damp=0.75
+Honda,Automotive,Various,enterprise,None,0,0.113,0.7478,1.0554,16.3694,0.1167,0.1483,moderate,stress=moderate|geo_ctx=office_building|size_damp=1.0
+Adobe,Tech,Various,enterprise,None,0,0.1786,-0.481,0.3087,20.363,0.0902,0.3974,low,stress=low|geo_ctx=factory_complex|size_damp=1.0
+Netflix,Media,Various,enterprise,None,0,0.0936,-0.1822,-0.4819,19.0173,0.0497,0.0367,low,stress=low|geo_ctx=office_building|size_damp=1.0
+Peregrine Financial,Finance,"Cedar Falls, IA",SME,Misappropriation,1,0.3413,-0.0613,0.5296,20.0249,0.0296,0.7652,low,stress=low|geo_ctx=small_office|size_damp=0.75
+LivePerson,Tech,Various,SME,None,0,0.0816,0.0241,0.4341,18.9828,0.1213,0.0272,low,stress=low|geo_ctx=office_park|size_damp=0.75

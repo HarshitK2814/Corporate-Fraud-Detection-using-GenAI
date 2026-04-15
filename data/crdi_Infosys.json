@@ -1,0 +1,43 @@
+{
+  "company": "Infosys",
+  "crdi_score": 0.5287,
+  "risk_label": "SUSPICIOUS",
+  "risk_icon": "\ud83d\udfe0",
+  "risk_description": "Multiple distortion signals \u2013 heightened scrutiny recommended",
+  "breakdown": [
+    {
+      "module": "Geospatial Verification",
+      "score": 0.4222,
+      "weight": 0.4,
+      "verdict": "LOW_RISK",
+      "details": {
+        "images_analyzed": 2,
+        "max_risk": 0.4229
+      }
+    },
+    {
+      "module": "Behavioral Forensics",
+      "score": 0.5997,
+      "weight": 0.6,
+      "verdict": "HIGH_RISK",
+      "details": {
+        "audio_stress": 0.8949,
+        "semantic_deception": 0.4029,
+        "hedging_trend": "STABLE",
+        "evasion_trend": "STABLE",
+        "key_red_flags": [
+          "We've had a strong performance in Q3",
+          "One of the most significant large deals we won",
+          "help NHS leverage AI to streamline operations and improve patient care",
+          "We believe we are uniquely positioned",
+          "could unlock a large incremental opportunity"
+        ]
+      }
+    }
+  ],
+  "data_sources": {
+    "geospatial": true,
+    "behavioral": true
+  },
+  "generated_at": "2026-02-14T21:04:51.834920"
+}

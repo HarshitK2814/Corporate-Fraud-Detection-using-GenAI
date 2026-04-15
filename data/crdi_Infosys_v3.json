@@ -1,0 +1,43 @@
+{
+  "company": "Infosys",
+  "crdi_score": 0.2741,
+  "risk_label": "CREDIBLE",
+  "risk_icon": "\u2705",
+  "risk_description": "Low distortion risk \u2013 indicators appear normal",
+  "breakdown": [
+    {
+      "module": "Geospatial Verification",
+      "score": 0.25,
+      "weight": 0.4,
+      "verdict": "LOW_RISK",
+      "details": {
+        "images_analyzed": 2,
+        "max_risk": 0.25
+      }
+    },
+    {
+      "module": "Behavioral Forensics",
+      "score": 0.2902,
+      "weight": 0.6,
+      "verdict": "MODERATE_RISK",
+      "details": {
+        "audio_stress": 0.5478,
+        "semantic_deception": 0.1184,
+        "hedging_trend": "STABLE",
+        "evasion_trend": "STABLE",
+        "key_red_flags": [
+          "vague explanation of head count increase",
+          "lack of specific numbers for guidance upgrade",
+          "avoidance of direct answer on margin dip",
+          "good outlook, even as we look into the next financial year\" without specific data",
+          "well on a way to finish our 20,000 number for this year\" without clear confirmation\n   ]"
+        ]
+      }
+    }
+  ],
+  "data_sources": {
+    "geospatial": true,
+    "behavioral": true
+  },
+  "generated_at": "2026-02-15T00:04:33.675296"
+}
